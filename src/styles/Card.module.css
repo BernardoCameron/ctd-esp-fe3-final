@@ -1,0 +1,46 @@
+.cardDentist {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+    width: 350px;
+    height: 400px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.darkTheme {
+    background-color: #242422;
+    color: #FDFBF6;
+}
+
+.darkTheme button {
+    background-color: #FDFBF6;
+    color: #242422;
+
+}
+
+.imgDentist {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.favButton {
+    color: #e2e2e2;
+    font-weight: 700;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    display: inline-flex;
+    background-color: #000000;
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
