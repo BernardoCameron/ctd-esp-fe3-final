@@ -2,11 +2,13 @@
 import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { ContextGlobal } from "../Components/utils/global.context";
+import DetailStyle from '../styles/Detail.module.css';
 
 const Detail = () => {
   const { state } = useContext(ContextGlobal);
   const { id } = useParams();
   const [dentist, setDentist] = useState(null);
+  const { theme, data } = state;
 
   useEffect(() => {
     const fetchDentist = async () => {
@@ -29,30 +31,43 @@ const Detail = () => {
   }
 
   return (
-    <table>
-      <tbody>
-        <tr>
-          <th>Name</th>
-          <td>{dentist.name}</td>
-        </tr>
-        <tr>
-          <th>Username</th>
-          <td>{dentist.username}</td>
-        </tr>
-        <tr>
-          <th>Email</th>
-          <td>{dentist.email}</td>
-        </tr>
-        <tr>
-          <th>Phone</th>
-          <td>{dentist.phone}</td>
-        </tr>
-        <tr>
-          <th>Website</th>
-          <td>{dentist.website}</td>
-        </tr>
-      </tbody>
-    </table>
+
+    <div className={`${DetailStyle.container} ${theme === 'dark' ? DetailStyle.darkTheme : ''}`}>
+      <div className={DetailStyle.content}>
+        <div>
+          <h1>Detail Dentist: {dentist.name}</h1>
+        </div>
+        <div>
+          <table>
+            <tbody>
+              <tr>
+                <th>Name</th>
+                <td>{dentist.name}</td>
+              </tr>
+              <tr>
+                <th>Username</th>
+                <td>{dentist.username}</td>
+              </tr>
+              <tr>
+                <th>Email</th>
+                <td>{dentist.email}</td>
+              </tr>
+              <tr>
+                <th>Phone</th>
+                <td>{dentist.phone}</td>
+              </tr>
+              <tr>
+                <th>Website</th>
+                <td>{dentist.website}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+    </div>
+
   );
 };
 

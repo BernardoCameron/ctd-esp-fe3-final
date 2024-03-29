@@ -4,6 +4,17 @@
     align-items: center;
     justify-content: space-between;
     height: 70vh;
+    width: 100%;
+}
+
+.darkTheme {
+    background-color: #333;
+    color: #fff;
+}
+
+.darkTheme .sendButton {
+    background-color: #e2e2e2;
+    color: #000000;
 }
 
 .textContainer {
@@ -39,12 +50,23 @@
 
 .buttonContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
 }
 
+.error {
+    color: red;
+    font-size: 15px;
+    margin-top: 5px;
+}
 
+.send {
+    color: green;
+    font-size: 15px;
+    margin-top: 5px;
+}
 
 .sendButton {
     color: #e2e2e2;
@@ -57,8 +79,8 @@
     background-color: #000000;
     width: 400px;
     height: 70px;
-    padding: 15px;
     margin-top: 20px;
+    padding: 15px;
     border-radius: 10px;
     align-items: center;
     justify-content: center;

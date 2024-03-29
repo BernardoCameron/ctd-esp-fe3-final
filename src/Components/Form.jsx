@@ -32,14 +32,14 @@ const Form = () => {
         </div>
 
         <div className={FormStyle.buttonContainer}>
-          <button className={FormStyle.sendButton}>Enviar</button>
-
           {
             showError && <p className={FormStyle.error}>Verifique los datos ingresados</p>
           }
           {
             showSend && <p className={FormStyle.send}>Formulario enviado con éxito</p>
           }
+          <button className={FormStyle.sendButton}>Enviar</button>
+
         </div>
 
 

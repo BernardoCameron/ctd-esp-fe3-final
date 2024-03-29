@@ -27,7 +27,10 @@ const Home = () => {
 
   return (
     <main className={`${HomeStyle.container} ${theme === 'dark' ? HomeStyle.darkTheme : ''}`}>
-      <h1>Home</h1>
+      <div className={HomeStyle.mainText}>
+        <h1>Home</h1>
+      </div>
+
       <div className='card-grid'>
         {data.map(dentist => (
           <Card key={dentist.id} name={dentist.name} username={dentist.username} id={dentist.id} onClick={handleClick} />

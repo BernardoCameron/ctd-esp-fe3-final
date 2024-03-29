@@ -1,11 +1,17 @@
 import Form from '../Components/Form'
 import FormStyle from '../styles/Form.module.css'
+import { useContext } from 'react'
+import { ContextGlobal } from '../Components/utils/global.context'
+
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Contact = () => {
+  const { state } = useContext(ContextGlobal);
+  const { theme } = state;
+
   return (
-    <div className={FormStyle.pagContainer}>
+    <div className={`${FormStyle.pagContainer} ${theme === 'dark' ? FormStyle.darkTheme : ''}`}>
 
       <div className={FormStyle.textContainer}>
         <h2>Want to know more?</h2>
